@@ -26,7 +26,7 @@ function FeelingsItem() {
         <input
           data-testid="input"
           placeholder={"1-5"}
-          value={feeling}
+          value={feelings}
           type={"number"}
           onChange={(e) => setFeelings(e.target.value)}
         />
