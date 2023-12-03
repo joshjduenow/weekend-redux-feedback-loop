@@ -5,10 +5,10 @@ import axios from "axios";
 function ReviewItem() {
   const dispatch = useDispatch();
 
-  const FeelingReducer = useSelector((store) => store.FeelingReducer);
-  const UnderstandingReducer = useSelector((store) => store.UnderstandingReducer);
-  const SupportReducer = useSelector((store) => store.SupportReducer);
-  const CommentReducer = useSelector((store) => store.CommentReducer);
+  const feeling = useSelector((store) => store.FeelingReducer);
+  const understanding = useSelector((store) => store.UnderstandingReducer);
+  const support = useSelector((store) => store.SupportReducer);
+  const comments = useSelector((store) => store.CommentReducer);
   const FeedbackReducer = useSelector((store) => store.FeedbackReducer);
   const history = useHistory();
 
@@ -17,10 +17,10 @@ function ReviewItem() {
       method: "POST",
       url: "/feedback",
       data: {
-        feeling: FeelingReducer,
-        understanding: UnderstandingReducer,
-        support: SupportReducer,
-        comments: CommentReducer,
+        feeling: feeling,
+        understanding: understanding,
+        support: support,
+        comments: comments,
       },
     }).then((res) => {
       dispatch({
