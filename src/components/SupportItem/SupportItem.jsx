@@ -23,6 +23,7 @@ function SupportItem() {
     <div>
       <h1>How well are you being supported ?</h1>
       <form>
+        <h5>Support?</h5>
         <input
           data-testid="input"
           placeholder={"1-5"}

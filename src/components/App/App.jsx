@@ -7,6 +7,7 @@ import SupportItem from "../SupportItem/SupportItem";
 import CommentItem from "../CommentItem/CommentItem";
 import ReviewItem from "../ReviewItem/ReviewItem";
 import FinishItem from "../FinishItem/FinishItem";
+import NewFeedbackItem from "../NewFeedbackItem/NewFeebackItem";
 
 function App() {
   return (
@@ -32,7 +33,7 @@ function App() {
           <ReviewItem />
         </Route>
         <Route exact path="/finish">
-          <FinishItem />
+          <NewFeedbackItem />
         </Route>
       </Router>
     </div>

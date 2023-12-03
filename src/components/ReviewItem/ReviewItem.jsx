@@ -9,8 +9,8 @@ function ReviewItem() {
   const UnderstandingReducer = useSelector((store) => store.UnderstandingReducer);
   const SupportReducer = useSelector((store) => store.SupportReducer);
   const CommentReducer = useSelector((store) => store.CommentReducer);
+  const FeedbackReducer = useSelector((store) => store.FeedbackReducer);
   const history = useHistory();
-  // const FeedbackReducer = useSelector((store) => store.FeedbackReducer);
 
   const postFeedback = () => {
     axios({
@@ -27,7 +27,7 @@ function ReviewItem() {
         type: "CLEAR_INPUTS",
       });
 
-      history.push("./finish");
+      history.push("/finish");
     });
   };
 

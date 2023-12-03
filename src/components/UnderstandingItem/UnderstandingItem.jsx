@@ -23,6 +23,7 @@ function UnderstandingItem() {
     <div>
       <h1>How well are you understanding the content ?</h1>
       <form>
+        <h5>Understanding?</h5>
         <input
           data-testid="input"
           placeholder={"1-5"}
