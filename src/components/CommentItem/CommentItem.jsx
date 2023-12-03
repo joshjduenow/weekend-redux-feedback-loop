@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
+import Button from '@mui/material/Button';
 
 function CommentItem() {
   let [comment, setComment] = useState("");
@@ -31,11 +32,12 @@ function CommentItem() {
           type={"text"}
           onChange={(e) => setComment(e.target.value)}
         />
-        <button 
+        <Button 
+          variant="contained" 
           data-testid="next" 
           onClick={HandleComment}>
           Next
-        </button>
+        </Button>
       </form>
     </div>
   );

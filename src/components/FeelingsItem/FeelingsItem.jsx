@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
+import Button from '@mui/material/Button';
+
 
 function FeelingsItem() {
   let [feelings, setFeelings] = useState("");
@@ -31,11 +33,12 @@ function FeelingsItem() {
           type={"number"}
           onChange={(e) => setFeelings(e.target.value)}
         />
-        <button
+        <Button 
+          variant="contained"
           data-testid="next" 
           onClick={HandleFeelings}>
           Next
-        </button>
+        </Button>
       </form>
     </div>
   );

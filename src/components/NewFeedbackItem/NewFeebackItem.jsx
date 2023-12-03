@@ -1,4 +1,5 @@
 import { useHistory } from "react-router-dom";
+import Button from '@mui/material/Button';
 
 function NewFeedbackItem() {
   const history = useHistory();
@@ -10,9 +11,9 @@ function NewFeedbackItem() {
   return (
     <>
       <h1>Thanks !</h1>
-      <button data-testid="next" onClick={goToHome}>
+      <Button variant="contained" data-testid="next" onClick={goToHome}>
         Leave New Feedback
-      </button>
+      </Button>
     </>
   );
 }

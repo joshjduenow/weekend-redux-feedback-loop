@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
+import Button from '@mui/material/Button';
+
 
 function SupportItem() {
   let [supportRating, setSupportRating] = useState("");
@@ -31,9 +33,12 @@ function SupportItem() {
           type={"number"}
           onChange={(e) => setSupportRating(e.target.value)}
         />
-        <button data-testid="next" onClick={HandleSupport}>
+        <Button 
+          variant="contained" 
+          data-testid="next" 
+          onClick={HandleSupport}>
           Next
-        </button>
+        </Button>
       </form>
     </div>
   );

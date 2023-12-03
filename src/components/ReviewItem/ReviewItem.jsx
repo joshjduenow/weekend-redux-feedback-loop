@@ -1,6 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
+import Button from '@mui/material/Button';
+
 
 function ReviewItem() {
   const dispatch = useDispatch();
@@ -39,9 +41,12 @@ function ReviewItem() {
       <p>Support: {support}</p>
       <p>Comments: {comments}</p>
 
-      <button data-testid="next" onClick={postFeedback}>
+      <Button 
+          variant="contained"
+          data-testid="next" 
+          onClick={postFeedback}>
         Submit
-      </button>
+      </Button>
     </div>
   );
 }

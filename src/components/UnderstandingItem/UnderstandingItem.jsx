@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
+import Button from '@mui/material/Button';
+
 
 function UnderstandingItem() {
   let [understanding, setUnderstanding] = useState("");
@@ -31,11 +33,12 @@ function UnderstandingItem() {
           type={"number"}
           onChange={(e) => setUnderstanding(e.target.value)}
         />
-        <button 
+        <Button 
+          variant="contained" 
           data-testid="next" 
           onClick={HandleUnderstanding}>
           Next
-        </button>
+        </Button>
       </form>
     </div>
   );
