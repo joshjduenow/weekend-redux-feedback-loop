@@ -1,12 +1,10 @@
-import axios from "axios";
 import "./App.css";
 import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
 import { HashRouter as Router, Route } from "react-router-dom";
 import FeelingsItem from "../FeelingsItem/FeelingsItem";
 import UnderstandingItem from "../UnderstandingItem/UnderstandingItem";
-
+import SupportItem from "../SupportItem/SupportItem";
+import UnderstandingItem from "../UnderstandingItem/UnderstandingItem";
 
 function App() {
   return (
