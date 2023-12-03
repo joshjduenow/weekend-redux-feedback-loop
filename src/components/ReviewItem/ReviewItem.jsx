@@ -27,7 +27,7 @@ function ReviewItem() {
         type: "CLEAR_INPUTS",
       });
 
-      history.push("/finish");
+      history.push("./finish");
     });
   };
 
@@ -35,10 +35,10 @@ function ReviewItem() {
     <div>
       <h1>Review Your Feedback</h1>
 
-      <p>Feelings :{FeelingReducer}</p>
-      <p>Understanding: {UnderstandingReducer}</p>
-      <p>Support: {SupportReducer}</p>
-      <p>Comments: {CommentReducer}</p>
+      <p>Feelings :{feeling}</p>
+      <p>Understanding: {understanding}</p>
+      <p>Support: {support}</p>
+      <p>Comments: {comments}</p>
 
       <button data-testid="next" onClick={postFeedback}>
         Submit
