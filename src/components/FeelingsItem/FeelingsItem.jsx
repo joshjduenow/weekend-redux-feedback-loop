@@ -16,7 +16,7 @@ function FeelingsItem() {
       type: "HANDLE_FEELINGS",
       payload: feelings,
     });
-    history.push("./understandInfo");
+    history.push("./understand");
   };
 
   return (
