@@ -4,7 +4,9 @@ import { HashRouter as Router, Route } from "react-router-dom";
 import FeelingsItem from "../FeelingsItem/FeelingsItem";
 import UnderstandingItem from "../UnderstandingItem/UnderstandingItem";
 import SupportItem from "../SupportItem/SupportItem";
-import UnderstandingItem from "../UnderstandingItem/UnderstandingItem";
+import CommentItem from "../CommentItem/CommentItem";
+import ReviewItem from "../ReviewItem/ReviewItem";
+import FinishItem from "../FinishItem/FinishItem";
 
 function App() {
   return (
