@@ -11,7 +11,7 @@ const FeelingReducer = (state = "", action) => {
 };
 
 const UnderstandingReducer = (state = "", action) => {
-  if (action.type === "SET_UNDERSTANDING") {
+  if (action.type === "HANDLE_UNDERSTANDING") {
     const understandingReduce = action.payload;
     return understandingReduce;
   }
@@ -19,27 +19,24 @@ const UnderstandingReducer = (state = "", action) => {
 };
 
 const SupportReducer = (state = "", action) => {
-  if (action.type === "SET_SUPPORT") {
+  if (action.type === "HANDLE_SUPPORT") {
     const supportingReduce = action.payload;
-
     return supportingReduce;
   }
   return state;
 };
 
 const CommentReducer = (state = "", action) => {
-  if (action.type === "SET_COMMENT") {
+  if (action.type === "HANDLE_COMMENT") {
     const comment = action.payload;
-    console.log("comment:", comment);
     return comment;
   }
   return state;
 };
 
-const getFeedback = (state = [], action) => {
-  if (action.type === "SET_FEEDBACK") {
+const FeedbackReducer = (state = [], action) => {
+  if (action.type === "HANDLE_FEEDBACK") {
     const feedback = action.payload;
-    console.log("review of feed back", feedback);
     return [...state, feedback];
   }
 
@@ -56,7 +53,7 @@ const store = createStore(
     UnderstandingReducer,
     SupportReducer,
     CommentReducer,
-    getFeedback,
+    FeedbackReducer,
   }),
   applyMiddleware(logger)
 );
