@@ -3,8 +3,8 @@ import logger from "redux-logger";
 
 const FeelingReducer = (state = "", action) => {
   if (action.type === "HANDLE_FEELINGS") {
-    const feelingsReduce = action.payload;
-    return feelingsReduce;
+    const feelings = action.payload;
+    return feelings;
   }
 
   return state;
@@ -12,16 +12,16 @@ const FeelingReducer = (state = "", action) => {
 
 const UnderstandingReducer = (state = "", action) => {
   if (action.type === "HANDLE_UNDERSTANDING") {
-    const understandingReduce = action.payload;
-    return understandingReduce;
+    const understanding = action.payload;
+    return understanding;
   }
   return state;
 };
 
 const SupportReducer = (state = "", action) => {
   if (action.type === "HANDLE_SUPPORT") {
-    const supportingReduce = action.payload;
-    return supportingReduce;
+    const supporting = action.payload;
+    return supporting;
   }
   return state;
 };
