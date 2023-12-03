@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 
-function CommentItem () {
+function CommentItem() {
   let [comment, setComment] = useState("");
 
   const history = useHistory();
@@ -28,7 +28,7 @@ function CommentItem () {
           placeholder={"text"}
           value={comment}
           type={"text"}
-          onChange={(event) => setComment(event.target.value)}
+          onChange={(e) => setComment(e.target.value)}
         />
         <button 
           data-testid="next" 
