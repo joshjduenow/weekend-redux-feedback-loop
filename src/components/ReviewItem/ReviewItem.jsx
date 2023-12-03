@@ -42,6 +42,7 @@ function ReviewItem() {
       <p>Comments: {comments}</p>
 
       <Button 
+          size="small"
           variant="contained"
           data-testid="next" 
           onClick={postFeedback}>

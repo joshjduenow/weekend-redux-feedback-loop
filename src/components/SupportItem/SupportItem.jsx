@@ -34,6 +34,7 @@ function SupportItem() {
           onChange={(e) => setSupportRating(e.target.value)}
         />
         <Button 
+          size="small"
           variant="contained" 
           data-testid="next" 
           onClick={HandleSupport}>

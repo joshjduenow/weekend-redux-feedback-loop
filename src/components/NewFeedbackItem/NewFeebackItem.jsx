@@ -11,7 +11,11 @@ function NewFeedbackItem() {
   return (
     <>
       <h1>Thanks !</h1>
-      <Button variant="contained" data-testid="next" onClick={goToHome}>
+      <Button 
+            size="large"
+            variant="contained" 
+            data-testid="next" 
+            onClick={goToHome}>
         Leave New Feedback
       </Button>
     </>

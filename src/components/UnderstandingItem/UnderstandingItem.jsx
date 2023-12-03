@@ -34,6 +34,7 @@ function UnderstandingItem() {
           onChange={(e) => setUnderstanding(e.target.value)}
         />
         <Button 
+          size="small"
           variant="contained" 
           data-testid="next" 
           onClick={HandleUnderstanding}>

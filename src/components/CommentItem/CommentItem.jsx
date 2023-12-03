@@ -33,6 +33,7 @@ function CommentItem() {
           onChange={(e) => setComment(e.target.value)}
         />
         <Button 
+          size="small"
           variant="contained" 
           data-testid="next" 
           onClick={HandleComment}>

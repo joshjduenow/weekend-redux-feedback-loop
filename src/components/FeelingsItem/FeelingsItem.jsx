@@ -34,6 +34,7 @@ function FeelingsItem() {
           onChange={(e) => setFeelings(e.target.value)}
         />
         <Button 
+          size="small"
           variant="contained"
           data-testid="next" 
           onClick={HandleFeelings}>
