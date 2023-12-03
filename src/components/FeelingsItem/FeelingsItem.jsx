@@ -1,41 +1,42 @@
-import React, { useState, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 
 function FeelingsItem() {
+  let [feelings, setFeelings] = useState("");
+
+  const history = useHistory();
+
   const dispatch = useDispatch();
 
-  const [feelingInput, setFeelingInput] = useState("");
-  const [selectedOption, setSelectedOption] = useState("");
-
-  const handleSubmit = (e) => {
+  const HandleFeeling = (e) => {
     e.preventDefault();
 
     dispatch({
-      type: "FEELINGS_INFO",
-      payload: { feelingInput },
+      type: "SET_FEELINGS",
+      payload: feelings,
     });
-
-    history.push("/checkout");
-  };
-
-  const onValueChange = (e) => {
-    setSelectedOption(e.target.value);
+    history.push("./understandInfo");
   };
 
   return (
     <div>
-      <h1>How are you feeling today?</h1>
-      <form onSubmit={handleSubmit}>
+      <h1>How well are you feeling today ?</h1>
+      <form>
         <input
-          onChange={(e) => setFeelingInput(e.target.value)}
-          value={feelingInput}
-          type="number"
-          placeholder="Feeling?"
+          data-testid="input"
+          placeholder={"1-5"}
+          value={feeling}
+          type={"number"}
+          onChange={(e) => setFeelings(e.target.value)}
         />
+        <button
+          data-testid="next" 
+          onClick={HandleFeeling}>
+          Next
+        </button>
       </form>
     </div>
   );
 }
-
 export default FeelingsItem;
