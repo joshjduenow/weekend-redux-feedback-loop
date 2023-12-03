@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 
 function SupportItem() {
-  let [supportRate, setSupportRate] = useState("");
+  let [supportRating, setSupportRating] = useState("");
 
   const history = useHistory();
 
@@ -13,8 +13,8 @@ function SupportItem() {
     e.preventDefault();
 
     dispatch({
-      type: "SET_SUPPORT",
-      payload: supportRate,
+      type: "HANDLE_SUPPORT",
+      payload: supportRating,
     });
     history.push("./comment");
   };
@@ -26,11 +26,13 @@ function SupportItem() {
         <input
           data-testid="input"
           placeholder={"1-5"}
-          value={supportRate}
+          value={supportRating}
           type={"number"}
-          onChange={(event) => setSupportRate(event.target.value)}
+          onChange={(e) => setSupportRating(e.target.value)}
         />
-        <button data-testid="next" onClick={HandleSupport}>
+        <button 
+          data-testid="next" 
+          onClick={HandleSupport}>
           Next
         </button>
       </form>
