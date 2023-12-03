@@ -5,22 +5,22 @@ import axios from "axios";
   function ReviewItem() {
     const dispatch = useDispatch();
 
-  const FeelingRating = useSelector((store) => store.FeelingRating);
-  const UnderstandingRating = useSelector((store) => store.UnderstandingRating);
-  const SupportRating = useSelector((store) => store.SupportRating);
-  const comment = useSelector((store) => store.Comment);
+  const FeelingReducer = useSelector((store) => store.FeelingReducer);
+  const UnderstandingReducer = useSelector((store) => store.UnderstandingReducer);
+  const SupportReducer = useSelector((store) => store.SupportReducer);
+  const CommentReducer = useSelector((store) => store.CommentReducer);
   const history = useHistory();
-  const getFeedback = useSelector((store) => store.getFeedback);
+  const FeedbackReducer = useSelector((store) => store.FeedbackReducer);
 
-  const postFeedbackToServer = () => {
+  const postFeedback = () => {
     axios({
       method: "POST",
       url: "/feedback",
       data: {
-        feeling: FeelingRating,
-        understanding: UnderstandingRating,
-        support: SupportRating,
-        comments: comment,
+        feeling: FeelingReducer,
+        understanding: UnderstandingReducer,
+        support: SupportReducer,
+        comments: CommentReducer,
       },
     }).then((res) => {
       dispatch({
@@ -35,12 +35,14 @@ import axios from "axios";
     <div>
       <h1>Review Your Feedback</h1>
 
-      <p>Feelings :{FeelingRating}</p>
-      <p>Understanding: {UnderstandingRating}</p>
-      <p>Support: {SupportRating}</p>
-      <p>Comments: {comment}</p>
+      <p>Feelings :{FeelingReducer}</p>
+      <p>Understanding: {UnderstandingReducer}</p>
+      <p>Support: {SupportReducer}</p>
+      <p>Comments: {CommentReducer}</p>
 
-      <button data-testid="next" onClick={postFeedbackToServer}>
+      <button 
+        data-testid="next" 
+        onClick={postFeedback}>
         Submit
       </button>
     </div>
