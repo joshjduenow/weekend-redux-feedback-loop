@@ -6,7 +6,6 @@ import UnderstandingItem from "../UnderstandingItem/UnderstandingItem";
 import SupportItem from "../SupportItem/SupportItem";
 import CommentItem from "../CommentItem/CommentItem";
 import ReviewItem from "../ReviewItem/ReviewItem";
-import FinishItem from "../FinishItem/FinishItem";
 import NewFeedbackItem from "../NewFeedbackItem/NewFeebackItem";
 
 function App() {

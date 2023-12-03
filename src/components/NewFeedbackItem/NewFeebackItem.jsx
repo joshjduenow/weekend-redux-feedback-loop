@@ -10,9 +10,7 @@ function NewFeedbackItem() {
   return (
     <>
       <h1>Thanks !</h1>
-      <button 
-       data-testid="next" 
-       onClick={goToHome}>
+      <button data-testid="next" onClick={goToHome}>
         Leave New Feedback
       </button>
     </>

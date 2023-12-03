@@ -31,9 +31,7 @@ function SupportItem() {
           type={"number"}
           onChange={(e) => setSupportRating(e.target.value)}
         />
-        <button 
-          data-testid="next" 
-          onClick={HandleSupport}>
+        <button data-testid="next" onClick={HandleSupport}>
           Next
         </button>
       </form>

@@ -9,7 +9,6 @@ function ReviewItem() {
   const understanding = useSelector((store) => store.UnderstandingReducer);
   const support = useSelector((store) => store.SupportReducer);
   const comments = useSelector((store) => store.CommentReducer);
-  const FeedbackReducer = useSelector((store) => store.FeedbackReducer);
   const history = useHistory();
 
   const postFeedback = () => {
