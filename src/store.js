@@ -1,61 +1,62 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import logger from "redux-logger";
 
-// Be sure to replace this reducer! 🙂
-const pizzaMenu = (state = [], action) => {
-  if (action.type === "SET_PIZZA") {
-    return action.payload;
+const FeelingReducer = (state = "", action) => {
+  if (action.type === "HANDLE_FEELINGS") {
+    const feelingsReduce = action.payload;
+    return feelingsReduce;
+  }
+
+  return state;
+};
+
+const UnderstandingReducer = (state = "", action) => {
+  if (action.type === "SET_UNDERSTANDING") {
+    const understandingReduce = action.payload;
+    return understandingReduce;
   }
   return state;
 };
 
-const cart = (state = [], action) => {
-  if (action.type === "ADD_PIZZA_TO_CART") {
-    console.log("PIZZA OBJECT", action.payload);
-    return [...state, action.payload];
+const SupportReducer = (state = "", action) => {
+  if (action.type === "SET_SUPPORT") {
+    const supportingReduce = action.payload;
+
+    return supportingReduce;
   }
-  if (action.type === "REMOVE_PIZZA_FROM_CART") {
-    return state.filter((pizza) => {
-      return pizza.id != action.payload.id;
-    });
+  return state;
+};
+
+const CommentReducer = (state = "", action) => {
+  if (action.type === "SET_COMMENT") {
+    const comment = action.payload;
+    console.log("comment:", comment);
+    return comment;
   }
-  if (action.type === "CLEAR_CART") {
+  return state;
+};
+
+const getFeedback = (state = [], action) => {
+  if (action.type === "SET_FEEDBACK") {
+    const feedback = action.payload;
+    console.log("review of feed back", feedback);
+    return [...state, feedback];
+  }
+
+  if (action.type === "CLEAR_INPUTS") {
     return [];
   }
-  return state;
-};
 
-const customerInfo = (state = [], action) => {
-  if (action.type === "CREATE_CUSTOMER_INFO") {
-    return action.payload;
-  }
-  if (action.type === "CLEAR_CART") {
-    return [];
-  }
-  return state;
-};
-
-const total = (state = 0, action) => {
-  if (action.type === "SET_THE_TOTAL") {
-    return action.payload;
-  }
-  return state;
-};
-
-const orders = (state = [], action) => {
-  if (action.type === "SET_ORDER") {
-    return action.payload;
-  }
   return state;
 };
 
 const store = createStore(
   combineReducers({
-    pizzaMenu,
-    cart,
-    customerInfo,
-    total,
-    orders,
+    FeelingReducer,
+    UnderstandingReducer,
+    SupportReducer,
+    CommentReducer,
+    getFeedback,
   }),
   applyMiddleware(logger)
 );
