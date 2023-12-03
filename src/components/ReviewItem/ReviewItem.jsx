@@ -2,15 +2,15 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 
-  function ReviewItem() {
-    const dispatch = useDispatch();
+function ReviewItem() {
+  const dispatch = useDispatch();
 
   const FeelingReducer = useSelector((store) => store.FeelingReducer);
   const UnderstandingReducer = useSelector((store) => store.UnderstandingReducer);
   const SupportReducer = useSelector((store) => store.SupportReducer);
   const CommentReducer = useSelector((store) => store.CommentReducer);
   const history = useHistory();
-  const FeedbackReducer = useSelector((store) => store.FeedbackReducer);
+  // const FeedbackReducer = useSelector((store) => store.FeedbackReducer);
 
   const postFeedback = () => {
     axios({
@@ -40,9 +40,7 @@ import axios from "axios";
       <p>Support: {SupportReducer}</p>
       <p>Comments: {CommentReducer}</p>
 
-      <button 
-        data-testid="next" 
-        onClick={postFeedback}>
+      <button data-testid="next" onClick={postFeedback}>
         Submit
       </button>
     </div>
