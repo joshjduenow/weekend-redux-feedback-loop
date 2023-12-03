@@ -9,11 +9,11 @@ function FeelingsItem() {
 
   const dispatch = useDispatch();
 
-  const HandleFeeling = (e) => {
+  const HandleFeelings = (e) => {
     e.preventDefault();
 
     dispatch({
-      type: "SET_FEELINGS",
+      type: "HANDLE_FEELINGS",
       payload: feelings,
     });
     history.push("./understandInfo");
@@ -32,7 +32,7 @@ function FeelingsItem() {
         />
         <button
           data-testid="next" 
-          onClick={HandleFeeling}>
+          onClick={HandleFeelings}>
           Next
         </button>
       </form>
