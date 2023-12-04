@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 
 function CommentItem() {
   let [comment, setComment] = useState("");
@@ -22,10 +23,14 @@ function CommentItem() {
 
   return (
     <div>
-      <h1>Any comments you wanna leave ?</h1>
+      <h1>Any comments you want to leave ?</h1>
       <form>
-        <h5>Comments</h5>
-        <input
+        
+        <TextField 
+          id="filled-basic"
+          helperText="Tell us how we're doing" 
+          variant="standard"
+          color="success"
           data-testid="input"
           placeholder={"text"}
           value={comment}

@@ -2,6 +2,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+
 
 
 function ReviewItem() {
@@ -42,7 +44,7 @@ function ReviewItem() {
       <p>Comments: {comments}</p>
 
       <Button 
-          size="small"
+          size="large"
           variant="contained"
           data-testid="next" 
           onClick={postFeedback}>

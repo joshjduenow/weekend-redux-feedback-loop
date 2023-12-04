@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 
 
 function UnderstandingItem() {
@@ -25,8 +26,12 @@ function UnderstandingItem() {
     <div>
       <h1>How well are you understanding the content ?</h1>
       <form>
-        <h5>Understanding?</h5>
-        <input
+        
+        <TextField 
+          id="filled-basic"
+          helperText="Tell us how well you understood todays content" 
+          variant="standard"
+          color="success"
           data-testid="input"
           placeholder={"1-5"}
           value={understanding}

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 
 
 function SupportItem() {
@@ -25,8 +26,12 @@ function SupportItem() {
     <div>
       <h1>How well are you being supported ?</h1>
       <form>
-        <h5>Support?</h5>
-        <input
+        
+        <TextField 
+          id="filled-basic"
+          helperText="Do you feel supported?" 
+          variant="standard"
+          color="success"
           data-testid="input"
           placeholder={"1-5"}
           value={supportRating}

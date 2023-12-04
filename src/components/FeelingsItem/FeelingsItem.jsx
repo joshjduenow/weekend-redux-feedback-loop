@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 
 
 function FeelingsItem() {
@@ -25,8 +26,11 @@ function FeelingsItem() {
     <div>
       <h1>How well are you feeling today ?</h1>
       <form>
-        <h5>Feeling?</h5>
-        <input
+        <TextField 
+          id="filled-basic"
+          helperText="Tell us how you're feeling" 
+          variant="standard"
+          color="success"
           data-testid="input"
           placeholder={"1-5"}
           value={feelings}
